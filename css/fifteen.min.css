@@ -1,0 +1,13 @@
+#puzzlearea,#scoreboard{margin-left:auto;margin-right:auto}#state,body,fieldset{text-align:center}body{font-family:Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14pt}#puzzlearea{height:400px;position:relative;width:400px}button{font-size:40px}.state{display:flex;justify-content:center;margin-top:20px;font-weight:700}.puzzletile{background-image:url(../img/jiabaili.jpg);background-size:400px 400px;background-repeat: no-repeat;border:5px solid #000;font-size:40pt;height:90px;position:absolute;width:90px}.movable:hover{border-color:red;color:red;cursor:pointer}#scoreboard{display:flex;align-content:center}#scores{display:flex;justify-content:center}#leastmove,#leasttime{font-size:15px;color:#474747;border:2px dashed #232323;padding:10px 20px 10px 10px}#leastmove{margin-right:20px;}#scorescont{display:none}#showscore{font-size:15px;margin-bottom:15px}
+.hidden {
+	display: none;
+}
+
+.loading {
+	width: 80px;
+	display: inline-block;
+}
+
+.initialhidden {
+	display: none;
+}

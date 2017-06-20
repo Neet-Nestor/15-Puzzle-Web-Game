@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<!--
+	Author: Nestor Qin
+	Github: https://github.com/Neet-Nestor/15-Puzzle-Web-Game
+	Author's Website: https://students.washington.edu/qiny8
+	A simple 15 puzzle game running on website.
+	The user can upload their own images as background.
+	-->
+	<head>
+		<title>Fifteen Puzzle Game</title>
+		<meta name="viewport" content="width=500, initial-scale=0.65">
+		<meta name="description" content="A Simple 15(Fifteen) Puzzles Game, Can Show The Time And The Moves">
+		<meta name="author" content="Nestor Qin">
+
+		<link href="https://webster.cs.washington.edu/images/fifteen/fifteen.gif"
+		      type="image/gif" rel="shortcut icon" />
+		<!-- your files that you will write -->
+		<link href="css/fifteen.min.css" type="text/css" rel="stylesheet" />
+		<script src="vendor/jquery/jquery.min.js" type="text/javascript"></script>
+		<script src="js/fifteen.js" type="text/javascript"></script>
+		<script src="js/click.js" type="text/javascript"></script>
+		<script src="js/upload.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<h1>Fifteen Puzzle Game</h1>
+		<div id="puzzlearea">
+		<!--
+			this area holds the actual fifteen puzzle pieces
+			add to it as you need to
+		-->
+		</div>
+		
+		<div class="state">
+			<fieldset id="moves">
+				<legend>Moves</legend><span id="moveN">0</span>
+			</fieldset>
+			<fieldset id="time">
+				<legend>Time</legend><span id="minute">00</span>:<span id="second">00</span>
+			</fieldset>
+			<fieldset id="serial">
+				<legend>Serial</legend>
+				<input type="checkbox" id="numberOrNot" checked="checked" />
+			</fieldset>
+			<fieldset id="time">
+				<legend>Pictures</legend>
+				<select id="imgchoice">
+					<option value="jiabaili" selected="selected">Vignette</option>
+					<option value="hongmao">Satania</option>
+					<option value="doulao">Cat</option>
+					<option value="andrew">Andrew Liu</option>
+				</select>
+			</fieldset>
+			<br/>
+		</div>
+		
+		<div class="state">
+			<fieldset>
+				<legend>Upload Your Own Image!</legend>
+				<form id="uploadimage" enctype="multipart/form-data" action="" method="POST">
+					<!-- 100MB -->
+					<input id="fileupload" name="upfile" type="file" required />
+					<input type="submit" value="Send File" />
+				</form>
+			</fieldset>
+		</div>
+
+		<p id="controls">
+			<button id="shufflebutton">Shuffle</button>
+		</p>
+		
+		<button id="showscore">Show High Scores</button>
+		
+		<div id="scorescont">
+			<div id="scores" class="initialhidden">
+				<div id="leastmove">
+					Least Moves:<br id="loading-break1" class="loading-break initialhidden" />
+					<img id="loading-1" class="initialhidden loading" src="icons/loading-pikachu.gif" alt="loading" />
+					<ol>
+						<li>Neet -- Moves 68</li>
+						<li>Echo -- Moves 92</li>
+						<li>XiaoLyu -- Moves 124</li>
+					</ol>
+				</div>
+				<div id="leasttime">
+					Least Time:<br id="loading-break2" class="loading-break initialhidden" />
+					<img id="loading-2" class="initialhidden loading" src="icons/loading-pikachu.gif" alt="loading" />
+					<ol>
+						<li>Neet -- Time 00:34</li>
+						<li>XiaoLyu -- Time 00:46</li>
+						<li>Echo -- Time 01:21</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		
+		<footer>
+            <p>Copyright &copy; Nestor Qin 2017</p>
+		</footer>
+	</body>
+</html>
