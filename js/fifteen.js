@@ -86,7 +86,6 @@
 	// be called when the user clicks the Shuffle button
 	// randomly rearrange the tiles of the puzzle into a solvable ordering
     function shuffle() {   
-		debugger;
         for (var i = 0; i < 1000; i++) {
             var neighbors = getNeighbors();
             var rand = parseInt(Math.random() * neighbors.length);
